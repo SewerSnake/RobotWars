@@ -62,7 +62,7 @@
     <!-- CreditActivity Strings -->
     <string name="credits">Credits</string>
     <string name="aboutTextView">This is an app for rating your favourite robots!</string>
-    <string name="creditsVideoButton">A button that starts a Youtube clip</string>
+    <string name="creditsVideoButton">A homage to Robot Wars</string>
     <string name="eric">Eric</string>
     <string name="infoEric">A Swedish robot combat fan.</string>
 

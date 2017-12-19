@@ -51,19 +51,14 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
     private static final String TAG = "RankingActivity";
 
     private ImageView robotImage;
-    private TextView tasteText;
+
     private SeekBar tasteBar;
-    private TextView priceText;
     private SeekBar priceBar;
+
     private EditText robotComment;
-    private Button saveButton;
-    private TextView awfulText;
-    private TextView perfectText;
-    private TextView expensiveText;
-    private TextView cheapText;
+
     private EditText robotName;
-    private TextView categoryText;
-    private Button discardButton;
+
     private ImageButton mapButton;
     private Spinner categorySpinner;
     private TextView tasteRateNumber;
@@ -101,8 +96,7 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
 
     private TextView checkInText;
     private Boolean edited = false;
-    private FloatingActionButton editButtonFloat;
-    
+
     DBHelper dbHelper = new DBHelper(this);
 
     @Override
@@ -161,25 +155,17 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
      */
     private void findViews() {
         robotImage = findViewById(R.id.robotImage);
-        tasteText = findViewById(R.id.tasteText);
         tasteBar = findViewById(R.id.tasteBar);
-        priceText = findViewById(R.id.priceText);
         priceBar = findViewById(R.id.priceBar);
         robotComment = findViewById(R.id.robotComment);
-        saveButton = findViewById(R.id.saveButton);
-        awfulText = findViewById(R.id.awfulText);
-        perfectText = findViewById(R.id.perfectText);
-        expensiveText = findViewById(R.id.expensiveText);
-        cheapText = findViewById(R.id.cheapText);
+
         robotName = findViewById(R.id.robotName);
-        categoryText = findViewById(R.id.categoryText);
-        discardButton = findViewById(R.id.discardButton);
+
         categorySpinner = findViewById(R.id.categorySpinner);
         tasteRateNumber = findViewById(R.id.tasteRateNumber);
         priceRateNumber = findViewById(R.id.priceRateNumber);
         mapButton = findViewById(R.id.mapButton);
         checkInText = findViewById(R.id.checkInText);
-        editButtonFloat = findViewById(R.id.editButtonFloat);
 
         robotComment.setElevation(0);
         robotName.setElevation(0);
