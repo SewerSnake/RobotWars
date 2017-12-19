@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackbrew"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbarTop"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blackbrew">
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:contentDescription="@string/logoImage"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarTop"
+        app:layout_constraintStart_toStartOf="@+id/toolbarTop"
+        app:layout_constraintTop_toTopOf="@+id/toolbarTop"
+        app:srcCompat="@drawable/logo"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/titleMenu"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="56dp"
+        android:background="@color/beer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/headerTopList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+
+            android:fontFamily="sans-serif"
+            android:textColor="@color/blackbrew"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+
+            android:text="@string/favourites"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/robotTopList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="110dp">
+    </ListView>
+
+    <include layout="@layout/bottom_navigation"/>
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+

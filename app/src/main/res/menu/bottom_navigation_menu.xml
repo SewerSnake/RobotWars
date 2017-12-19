@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Icons for the bottom navigation view -->
+
+    <item
+        android:id="@+id/ic_home"
+        android:icon="@mipmap/ic_home"
+        android:title="@string/home">
+    </item>
+
+    <item
+        android:id="@+id/ic_category"
+        android:icon="@mipmap/ic_category"
+        android:title="@string/category">
+    </item>
+
+    <item
+        android:id="@+id/ic_toplist"
+        android:icon="@mipmap/ic_toplist"
+        android:title="@string/topList">
+    </item>
+
+    <item
+        android:id="@+id/ic_mapview"
+        android:icon="@mipmap/ic_mapview"
+        android:title="@string/mapView">
+    </item>
+
+</menu>

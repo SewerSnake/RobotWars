@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/ic_camera"
+        android:title=""
+        android:icon="@mipmap/ic_action_camera2"
+        app:showAsAction="ifRoom">
+    </item>
+
+    <item
+        android:id="@+id/ic_addCategory"
+        android:title="@string/addCategory"
+        app:showAsAction="withText">
+    </item>
+
+    <item
+        android:id="@+id/ic_deleteCategory"
+        android:title="@string/deleteCategoryMenu"
+        app:showAsAction="withText">
+    </item>
+</menu>

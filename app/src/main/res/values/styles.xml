@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. No ActionBar is used. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+
+        <!-- Unique theme for this application.  -->
+        <item name="colorPrimary">@color/beer</item>
+        <item name="colorPrimaryDark">@color/blackbrew</item>
+        <item name="colorAccent">@color/beer</item>
+        <item name="android:colorBackground">@color/blackbrew</item>
+        <item name="android:elevation">8dp</item>
+
+    </style>
+
+</resources>

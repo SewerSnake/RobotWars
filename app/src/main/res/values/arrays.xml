@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="images">
+        <item>@drawable/erics</item>
+    </array>
+
+    <array name="persons">
+        <item>@string/eric</item>
+    </array>
+
+    <array name="descriptions">
+        <item>@string/infoEric</item>
+    </array>
+
+</resources>

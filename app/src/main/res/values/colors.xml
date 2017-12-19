@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Useful colors for the "Robot Wars" app.  -->
+
+    <color name="black">#000000</color>
+    <!-- Original value in "BrewLikes": #fcb904 -->
+    <color name="beer">#4081A4</color>
+    <color name="darkGrey">#535457</color>
+    <color name="white">#fff</color>
+    <color name="blackbrew">#2e2e2e</color>
+
+</resources>

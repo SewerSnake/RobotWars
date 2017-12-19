@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blackbrew"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- The toolbar -->
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbarTop"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blackbrew">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarTop"
+        app:layout_constraintStart_toStartOf="@+id/toolbarTop"
+        app:layout_constraintTop_toTopOf="@+id/toolbarTop"
+        app:srcCompat="@drawable/logo" />
+
+    <!-- Title menu -->
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/titleMenu"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="56dp"
+        android:background="@color/beer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvRobotName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/robotName"
+        android:textAllCaps="true"
+        android:textColor="@color/blackbrew"
+        android:textSize="25sp"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/titleMenu"/>
+
+    <ImageView
+        android:id="@+id/ivNavBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onNavBackClick"
+        android:src="@mipmap/ic_left_arrow"
+        app:layout_constraintTop_toTopOf="@id/titleMenu"
+        app:layout_constraintEnd_toEndOf="@id/titleMenu"/>
+
+    <!-- Middle section -->
+
+    <ImageView
+        android:id="@+id/ivRobot"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onRobotImageClick"
+        android:contentDescription="@string/robotPic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleMenu"
+        app:srcCompat="@android:drawable/btn_star_big_off"/>
+
+    <TextView
+        android:id="@+id/tvPriceScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:paddingTop="0dp"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleMenu"/>
+
+
+    <TextView
+        android:id="@+id/tvTasteScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPriceScore"/>
+
+    <TextView
+        android:id="@+id/tvRateScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTasteScore" />
+
+    <ImageView
+        android:id="@+id/line"
+        android:contentDescription="@string/lineImage"
+        android:layout_width="95dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/gradient_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRateScore"/>
+
+    <!-- This is where the Facebook share button is created -->
+
+    <LinearLayout
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:gravity="center"
+        android:textColor="@color/blackbrew"
+        android:background="@drawable/little_rounded_background"
+        app:layout_constraintTop_toBottomOf="@id/ivRobot"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivLine2"
+        android:contentDescription="@string/lineImage"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/gradient_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategory"/>
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLine2"/>
+
+    <ImageView
+        android:id="@+id/ivLine3"
+        android:contentDescription="@string/lineImage"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/gradient_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfo"/>
+
+    <LinearLayout
+        android:id="@+id/container2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:onClick="onLocationClick"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvInfo"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/ivLocation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_mapview_white"
+            app:layout_constraintStart_toStartOf="@id/container2"
+            app:layout_constraintTop_toBottomOf="@+id/container2"/>
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@+id/ivLocation"
+            app:layout_constraintEnd_toEndOf="@+id/container2"/>
+    </LinearLayout>
+
+    <!-- Bottom navigation -->
+
+    <include layout="@layout/bottom_navigation"/>
+
+</android.support.constraint.ConstraintLayout>

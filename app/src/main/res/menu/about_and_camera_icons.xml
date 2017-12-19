@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/aboutIcon"
+        android:icon="@mipmap/ic_action_about2"
+        android:title="@string/itemTitleAbout"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/cameraIcon"
+        android:icon="@mipmap/ic_action_camera2"
+        android:title="@string/itemTitleCamera"
+        app:showAsAction="ifRoom" />
+
+</menu>

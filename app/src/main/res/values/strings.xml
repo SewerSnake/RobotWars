@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">Robot Wars</string>
+
+    <!-- BottomNavigation Strings -->
+    <string name="home">Home</string>
+    <string name="topList">Top 10</string>
+    <string name="mapView">Map</string>
+
+    <string name="ok">OK</string>
+    <string name="error">Error</string>
+
+    <!-- RankingActivity Strings -->
+    <string name="pricerating">Price</string>
+    <string name="rank">Ranking</string>
+    <string name="robotName">The name of the robot:</string>
+    <string name="rankingComment">Comment the robot</string>
+
+    <string name="robotCategory">Category</string>
+    <string name="rankRobot">Rank the robot</string>
+    <string name="tasteAwful">Awful</string>
+    <string name="tastePerfect">Perfect</string>
+    <string name="priceExpensive">Expensive</string>
+    <string name="priceCheap">Cheap</string>
+
+    <string name="category">Category</string>
+    <string name="imageEdit">Edit</string>
+    <string name="taste">Ranking:</string>
+    <string name="price">Price:</string>
+    <string name="rate">Average:</string>
+
+    <string name="edit">Edit comment</string>
+    <string name="delete">Delete robot</string>
+    <string name="download_text">DOWNLOAD</string>
+    <string name="largerRobot">A larger picture of the robot</string>
+    <string name="download_picture">An image for the download button</string>
+
+    <string name="five">5</string>
+
+    <!-- AboutActivity Strings -->
+    <string name="logoImage">A picture of the Robot Wars logo</string>
+    <string name="lineImage">An image of  a line</string>
+
+    <!-- Download dialog box -->
+    <string name="downloadTitle">Enter url for a downloadable image</string>
+    <string name="downloadButton">Download</string>
+    <string name="cancelDownloadButton">Cancel</string>
+    <string name="nourlEntered">You must enter an url!</string>
+
+    <!-- Options in Toolbar -->
+    <string name="saveRobot">Save</string>
+    <string name="saveCategory">Save category</string>
+    <string name="discardRobot">Cancel</string>
+    <string name="deleteCategory">Delete category</string>
+    <string name="categoryNotFound">Category not found!</string>
+    <string name="categoryNotEmpty">The category is not empty!</string>
+    <string name="categoryDeleteSuccessful">Category deleted:</string>
+    
+    <!-- CategoriesActivity Strings -->
+    <string name="cancel">Cancel</string>
+    <string name="item">Item</string>
+
+    <!-- CreditActivity Strings -->
+    <string name="credits">Credits</string>
+    <string name="aboutTextView">This is an app for rating your favourite robots!</string>
+    <string name="creditsVideoButton">A button that starts a Youtube clip</string>
+    <string name="eric">Eric</string>
+    <string name="infoEric">A Swedish robot combat fan.</string>
+
+    <!-- DetailActivity Strings -->
+    <string name="creatorPicture">A picture of the app creator</string>
+    <string name="personalInfo">Personal information</string>
+    <string name="textView">TextView</string>
+    <string name="heading">Heading</string>
+
+    <!-- Picture method choice dialog box -->
+    <string name="timeForCombat">Time for robot combat!</string>
+    <string name="chooseAlternative">Choose an alternative</string>
+    <string name="noPhoto">No picture</string>
+    <string name="takePhoto">Take a picture</string>
+
+    <string name="lastChange">Last chance to change</string>
+    <string name="addCategory">Add a weapon category</string>
+    <string name="addedCategory">Category added</string>
+    <string name="noCategoryEntered">Enter category name!</string>
+    <string name="saveToUnknown">Are you sure you want to save as an unknown category?</string>
+
+    <!-- TopListActivity Strings -->
+    <string name="favourites">My favourite robots</string>
+    <string name="myFavouriteRobot">My top 10</string>
+    <string name="robotPic">Robot picture</string>
+
+    <!-- Useful for dialog boxes -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="nameTheRobot">You have to give the robot a name!</string>
+    <string name="editRobotName">Edit robot name</string>
+    <string name="deleting">Are you sure?</string>
+    <string name="pictureTheRobot">You have to take a picture!</string>
+    <string name="commentTheRobot">You have to comment!</string>
+    <string name="deleteQuestion">Do you want to delete the robot?</string>
+
+    <!-- GPS related? -->
+    <string name="noCheckedInRobots">You have not checked in any robots yet!</string>
+    <string name="searchTextView">Search for address here</string>
+    <string name="addressInSnippet">Address:</string>
+    <string name="websiteInSnippet">Website:</string>
+    <string name="telInSnippet">Phone number:</string>
+    <string name="invalidLocation">Invalid location. Choose a location</string>
+    <string name="successfully_posted_post">Managed to post</string>
+    <string name="success">Success</string>
+
+    <!-- Menu-related Strings -->
+    <string name="itemTitleAbout">ItemTitleAbout</string>
+    <string name="itemTitleCamera">ItemTitleCamera</string>
+    <string name="addCategoryMenu">Add category</string>
+    <string name="deleteCategoryMenu">Delete category</string>
+
+    <!-- Error messages -->
+    <string name="permissionsFailed">You have to give permission to use location info!</string>
+    <string name="locationFailed">Unable to find your location</string>
+    <string name="error_file">Unable to save file</string>
+    <string name="error_download">"An error occurred. Did you enter an incorrect url?"</string>
+    <string name="gpsNotImplemented">GPS function has not been implemented yet!</string>
+
+</resources>
