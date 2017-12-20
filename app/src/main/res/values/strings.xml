@@ -110,6 +110,10 @@
     <string name="successfully_posted_post">Managed to post</string>
     <string name="success">Success</string>
 
+    <!-- Facebook -->
+    <string name="fbID">738451299697456</string>
+    <string name="fbCP">com.facebook.app.FacebookContentProvider738451299697456</string>
+
     <!-- Menu-related Strings -->
     <string name="itemTitleAbout">ItemTitleAbout</string>
     <string name="itemTitleCamera">ItemTitleCamera</string>

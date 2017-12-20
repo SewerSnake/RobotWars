@@ -23,10 +23,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!-- Meta data -->
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fbID"/>
+
         <!-- Providers -->
         <provider
-            android:name="android.support.v4.content.FileProvider"
             android:authorities="com.example.robotwars.FileProvider"
+            android:name="android.support.v4.content.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
              
@@ -34,6 +38,13 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <provider
+            android:authorities="@string/fbCP"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"/>
+
+        <!-- Activities -->
 
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait"
