@@ -17,7 +17,6 @@ import com.facebook.share.widget.ShareButton;
 /**
  * A class that handles the sharing of the photo to Facebook.
  */
-
 public class SharePhotoFragment extends Fragment {
 
     private static final String TAG = "SharePhotoFragment";
@@ -53,21 +52,23 @@ public class SharePhotoFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //Log.d(TAG, "onViewCreated: ");
         setSharePhoto(view);
     }
 
     /**
-     * A method that builds the photo to share on Facebook.
+     * A method that builds the photo to share on Facebook,
+     * when the 'Share' button is clicked.
      *
      * @param view - ShareButton
      */
     private void setSharePhoto(View view) {
-        //Log.d(TAG, "setSharePhoto: ");
+        Log.d(TAG, "Share button pressed!");
+
         Bitmap image = BitmapFactory.decodeFile(getArguments().getString("photoPath"));
         SharePhoto sharePhoto = new SharePhoto.Builder()
                 .setBitmap(image)
                 .build();
+
         SharePhotoContent sharePhotoContent = new SharePhotoContent.Builder()
                 .addPhoto(sharePhoto)
                 .setShareHashtag(new ShareHashtag.Builder()
