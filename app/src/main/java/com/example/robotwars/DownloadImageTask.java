@@ -24,10 +24,21 @@ public class DownloadImageTask extends AsyncTask<String,Void,Bitmap> {
 
     private HttpURLConnection connection;
 
+    /**
+     * Ensures that DownLoadImageTask only has access
+     * to one single method in RankingActivity.
+     * @param listener  A RankingActivity object
+     */
     public DownloadImageTask(ImageDownloadedListener listener) {
         this.listener = listener;
     }
 
+    /**
+     * Uses http GET to retrieve an image from
+     * the web page the user provided.
+     * @param params    The url for the image
+     * @return  a Bitmap object
+     */
     @Override
     protected Bitmap doInBackground(String... params) {
 
@@ -35,7 +46,6 @@ public class DownloadImageTask extends AsyncTask<String,Void,Bitmap> {
 
         try {
             url = new URL(params[0]);
-            //url = new URL("http://www.battlebotsupdate.com/wp-content/uploads/2017/11/rwuks10e1_donnie.png");
 
             connection = (HttpURLConnection) url.openConnection();
             connection.setReadTimeout(5000);
@@ -62,6 +72,13 @@ public class DownloadImageTask extends AsyncTask<String,Void,Bitmap> {
         }
     }
 
+    /**
+     * This occurs after the image has been
+     * downloaded. The http connection is
+     * closed, and the method in
+     * RankingActivity is called.
+     * @param bitmap    the downloaded Bitmap
+     */
     @Override
     protected void onPostExecute(Bitmap bitmap) {
         if (connection != null)
