@@ -301,6 +301,17 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
     }
 
     /**
+     * A method that sends the user to the gps menu,
+     * where the user can choose a place to log in to.
+     * @param view  the view
+     */
+    public void onCheckinClick(View view) {
+        Intent intent = new Intent(this, MapActivity.class);
+        intent.putExtra("ID", 1);
+        startActivityForResult(intent, 1);
+    }
+
+    /**
      * (Prepares an url for the task.)
      * Calls the 'magic' execute method.
      * @param url  the full http path of the picture

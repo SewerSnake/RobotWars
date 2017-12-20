@@ -31,6 +31,7 @@
     <string name="edit">Edit comment</string>
     <string name="delete">Delete robot</string>
     <string name="download_text">DOWNLOAD</string>
+    <string name="checkin_GPS">CHECK IN</string>
     <string name="largerRobot">A larger picture of the robot</string>
     <string name="download_picture">An image for the download button</string>
 

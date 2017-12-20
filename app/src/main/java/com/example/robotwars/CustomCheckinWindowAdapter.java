@@ -22,12 +22,12 @@ public class CustomCheckinWindowAdapter implements GoogleMap.InfoWindowAdapter {
         mWindow = LayoutInflater.from(context).inflate(R.layout.custom_checkin_window, null);
     }
 
-    private void renderWindowText(Marker marker, View view){
+    private void renderWindowText(Marker marker, View view) {
         String title = marker.getTitle();
         TextView tvTitle = view.findViewById(R.id.title);
 
-        //Sets the markers title to the title of the window
-        if(!title.equals("")){
+        // Sets the markers title to the title of the window
+        if (title != null && !title.equals("")) {
             tvTitle.setText(title);
         }
     }

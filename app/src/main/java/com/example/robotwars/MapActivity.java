@@ -248,7 +248,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         Log.d(TAG, "moveMapToLocation: moving the map to location. " + latLng);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
 
-        if(ID == 1) {
+        if (ID == 1) {
             mMap.setInfoWindowAdapter(new CustomCheckinWindowAdapter(MapActivity.this));
             mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
                 @Override
@@ -260,6 +260,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                     intent.putExtra("website", mPlace.getWebsiteUri());
                     intent.putExtra("address", mPlace.getAddress());
                     intent.putExtra("location", mPlace.getName());
+
                     intent.putExtra("lat", mPlace.getLatLng().latitude);
                     intent.putExtra("lng", mPlace.getLatLng().longitude);
 
@@ -269,6 +270,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                     Log.i(TAG, "onInfoWindowCLick: sets address to " + mPlace.getAddress());
                     Log.i(TAG, "onInfoWindowCLick: sets website to " + mPlace.getWebsiteUri());
                     Log.i(TAG, "onInfoWindowCLick: sets phone number to " + mPlace.getPhoneNumber());
+
                     setResult(1, intent);
                     finish();
                 }
@@ -304,7 +306,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             Log.d(TAG, "getLatLngFromAddress: created new latLng "+ generatedLatLng);
 
         } catch (IOException ex) {
-            Log.d(TAG, "getLatLngFromAddress: caught IOEcxeption");
+            Log.d(TAG, "getLatLngFromAddress: caught IOException");
             ex.printStackTrace();
 
         }
