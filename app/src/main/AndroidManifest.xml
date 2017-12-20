@@ -23,9 +23,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- Meta data -->
+        <!-- Meta data for Facebook -->
         <meta-data android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/fbID"/>
+
+        <!-- Meta data needed for the GPS to work -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/googleAPI" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <!-- Providers -->
         <provider
@@ -94,6 +102,10 @@
 
         <activity
             android:name=".CreditActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".MapActivity"
             android:screenOrientation="portrait" />
 
         <service android:name=".GPS">

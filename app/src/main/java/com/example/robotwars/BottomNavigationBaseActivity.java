@@ -69,10 +69,11 @@ public class BottomNavigationBaseActivity extends AppCompatActivity {
                         break;
                     case R.id.ic_mapview:
                         item.setChecked(true);
-                        Toast.makeText(getApplicationContext(), R.string.gpsNotImplemented, Toast.LENGTH_SHORT).show();
-                        /*Intent mapIntent = new Intent(context, MapActivity.class);
+                        //Toast.makeText(getApplicationContext(),
+                        // R.string.gpsNotImplemented, Toast.LENGTH_SHORT).show();
+                        Intent mapIntent = new Intent(context, MapActivity.class);
                         mapIntent.putExtra("ID", 3);
-                        startActivity(mapIntent);*/
+                        startActivity(mapIntent);
                         break;
                 }
                 return false;
