@@ -100,8 +100,8 @@
     <string name="commentTheRobot">You have to comment!</string>
     <string name="deleteQuestion">Do you want to delete the robot?</string>
 
-    <!-- GPS related? -->
-    <string name="googleAPI">AIzaSyAe6OaNqkBGE7kHTaml2Moh_U0_UR-vj9s</string>
+    <!-- GPS related -->
+    <string name="googleAPI">AIzaSyDpKIyKBqXCv4NmCHyE3Mrysz0gep44EjQ</string>
     <string name="checkin_text">CHECK IN</string>
     <string name="noCheckedInRobots">You have not checked in any robots yet!</string>
     <string name="searchTextView">Search for address here</string>
