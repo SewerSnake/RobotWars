@@ -59,10 +59,9 @@ public class SharePhotoFragment extends Fragment {
      * A method that builds the photo to share on Facebook,
      * when the 'Share' button is clicked.
      *
-     * @param view - ShareButton
+     * @param view - the view
      */
     private void setSharePhoto(View view) {
-        Log.d(TAG, "Share button pressed!");
 
         Bitmap image = BitmapFactory.decodeFile(getArguments().getString("photoPath"));
         SharePhoto sharePhoto = new SharePhoto.Builder()
