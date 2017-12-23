@@ -302,7 +302,7 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
 
     /**
      * A method that sends the user to the gps menu,
-     * where the user can choose a place to log in to.
+     * upon clicking the "Check in" button.
      * @param view  the view
      */
     public void onCheckinClick(View view) {
@@ -629,7 +629,7 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
      * and height.
      * @param targetW   the target width
      * @param targetH   the target height
-     * @return  a Bitmap
+     * @return  a Bitmap object
      */
     private Bitmap scalePicture(int targetW, int targetH) {
 
