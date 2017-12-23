@@ -2,7 +2,7 @@
 <resources>
 
     <array name="images">
-        <item>@drawable/erics</item>
+        <item>@drawable/ericsthumbnail</item>
     </array>
 
     <array name="persons">
