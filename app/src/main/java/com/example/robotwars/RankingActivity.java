@@ -339,7 +339,7 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
                 makeToast(getResources().getString(R.string.error_file));
             }
 
-            saveBitmapToFile(bitmap, photoFile);
+            PictureHandler.saveBitmapToFile(bitmap, photoFile);
 
             saveImageToFiles();
         }
@@ -527,8 +527,8 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
             File fBig = createImageFile("big");
             File fSmall = createImageFile("small");
 
-            saveBitmapToFile(largeImage, fBig);
-            saveBitmapToFile(littleImage, fSmall);
+            PictureHandler.saveBitmapToFile(largeImage, fBig);
+            PictureHandler.saveBitmapToFile(littleImage, fSmall);
 
             picture = fBig.getAbsolutePath();
             smallPicture = fSmall.getAbsolutePath();
@@ -539,31 +539,6 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
         }
 
         robotImage.setImageBitmap(largeImage);
-    }
-
-    /**
-     * Saves the bitmap object to the
-     * selected file.
-     * @param bitmap    the bitmap
-     * @param file  the file
-     */
-    private void saveBitmapToFile(Bitmap bitmap, File file) {
-        FileOutputStream out = null;
-        try {
-            out = new FileOutputStream(file);
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
-            // PNG is a lossless format, the compression factor (100) is ignored
-        } catch (Exception e) {
-            out = null;
-        } finally {
-            try {
-                if (out != null) {
-                    out.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     /**
