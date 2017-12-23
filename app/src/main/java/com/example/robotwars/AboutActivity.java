@@ -95,12 +95,12 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     /**
-     * Handles what happens when the icons in the toolbar are clicked.
+     * Handles what happens when the icon in the toolbar is clicked.
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if(id == R.id.cameraIcon2){
+        if (id == R.id.cameraIcon2) {
             Intent cameraIntent = new Intent(this, RankingActivity.class);
             startActivity(cameraIntent);
             //Use flags here so the activities don't get put on the stack?

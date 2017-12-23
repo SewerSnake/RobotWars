@@ -671,8 +671,8 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
     }
 
     /**
-     * A method to get the taste rate.
-     * @return a double with the price rate.
+     * A method to get the rank of the robot.
+     * @return a double with the ranking value
      */
     private double saveTaste() {
         return Double.parseDouble(tasteRateNumber.getText().toString());
