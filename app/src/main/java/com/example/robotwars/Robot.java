@@ -1,13 +1,15 @@
 package com.example.robotwars;
 
-import android.util.Log;
-
 import com.google.android.gms.maps.model.LatLng;
 
 /**
- * Robot class.
+ * A class for holding all
+ * crucial data about a
+ * robot.
  */
 public class Robot {
+
+    private static final String TAG = "Robot";
 
     private long id;
     private String name = null;
@@ -30,10 +32,9 @@ public class Robot {
     /**
      * Empty constructor
      */
-    public Robot() {
-    }
+    public Robot() {}
 
-    //Constructor with GPS
+    // Constructor for usage with GPS
     public Robot(String name, int categoryId, double price,
                  double taste, String comment, String photoPath,
                  String location, double latitude, double longitude,

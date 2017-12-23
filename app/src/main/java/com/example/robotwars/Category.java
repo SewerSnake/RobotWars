@@ -1,7 +1,9 @@
 package com.example.robotwars;
 
 /**
- * Category (robot) class.
+ * A class for holding the
+ * id and name of a weapon
+ * category.
  */
 public class Category {
 

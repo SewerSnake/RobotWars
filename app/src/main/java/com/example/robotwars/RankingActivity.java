@@ -50,6 +50,10 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
 
     private static final String TAG = "RankingActivity";
 
+    static final int REQUEST_TAKE_PHOTO = 1337;
+    static final int RESULT_LOAD_IMAGE = 217;
+    static final int REQUEST_CODE = 7175;
+
     private ImageView robotImage;
 
     private SeekBar tasteBar;
@@ -70,11 +74,7 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
     private double lat = 0.0;
     private double lng = 0.0;
     private LatLng latLng;
-    
-    static final int REQUEST_TAKE_PHOTO = 1337;
-    static final int RESULT_LOAD_IMAGE = 217;
-    static final int REQUEST_CODE = 7175;
-    
+
     private String name;
     private String comment;
     private double taste;
