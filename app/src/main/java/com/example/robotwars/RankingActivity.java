@@ -312,16 +312,10 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
     }
 
     /**
-     * (Prepares an url for the task.)
      * Calls the 'magic' execute method.
      * @param url  the full http path of the picture
      */
     private void download(String url) {
-        /*String url = "http://robotwars.wikia.com/wiki/"
-                + name
-                + "?file="
-                + name
-                + ".png";*/
         DownloadImageTask downloadImageTask = new DownloadImageTask(this);
         downloadImageTask.execute(url);
     }
@@ -509,7 +503,6 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
             address = data.getStringExtra("address");
             phoneNumber = data.getStringExtra("phoneNumber");
 
-            //Not the best solution... Change this to access mipmap later
             mapButton.setImageResource(R.drawable.logo);
 
             mapButton.setBackgroundColor(
@@ -526,9 +519,9 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
      * One small one, 500 x 500, which is used in other activities.
      */
     private void saveImageToFiles() {
-        largeImage = scalePicture(960,960);
+        largeImage = PictureHandler.scalePicture(mCurrentPhotoPath, 960, 960);
 
-        littleImage = scalePicture(500,500);
+        littleImage = PictureHandler.scalePicture(mCurrentPhotoPath,500,500);
 
         try {
             File fBig = createImageFile("big");
@@ -625,36 +618,6 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
     }
 
     /**
-     * Scales the picture to the target width
-     * and height.
-     * @param targetW   the target width
-     * @param targetH   the target height
-     * @return  a Bitmap object
-     */
-    private Bitmap scalePicture(int targetW, int targetH) {
-
-        BitmapFactory.Options bmOptions = new BitmapFactory.Options();
-        bmOptions.inJustDecodeBounds = true;
-        BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
-
-        // The dimensions of the Bitmap
-        int photoW = bmOptions.outWidth;
-        int photoH = bmOptions.outHeight;
-
-        // Decides how much to scale down the picture.
-        int scaleFactor = Math.min(photoW/targetW, photoH/targetH);
-
-        // Decodes the image into a Bitmap, which is sized to fill the View.
-        bmOptions.inJustDecodeBounds = false;
-        bmOptions.inSampleSize = scaleFactor;
-
-        // Most apps should avoid using inPurgeable to allow for a fast and fluid UI.
-        // bmOptions.inPurgeable = true;
-
-        return BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
-    }
-
-    /**
      * Creates and shows a Toast.
      * @param text  the text to appear in the Toast
      */
@@ -688,7 +651,7 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
 
     /**
      * Saving the comment for the robot.
-     * @return a String for the comment to the robot.
+     * @return a String for the robot's comment
      */
     private String saveRobotComment() {
         return robotComment.getText().toString();

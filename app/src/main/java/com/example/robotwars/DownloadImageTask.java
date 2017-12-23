@@ -64,8 +64,7 @@ public class DownloadImageTask extends AsyncTask<String,Void,Bitmap> {
         } catch (MalformedURLException e) {
             return null;
         } catch (IOException e) {
-            if (connection != null)
-                connection.disconnect();
+            disconnect();
             return null;
         }
     }
@@ -79,9 +78,18 @@ public class DownloadImageTask extends AsyncTask<String,Void,Bitmap> {
      */
     @Override
     protected void onPostExecute(Bitmap bitmap) {
+        disconnect();
+        listener.onImageDownloaded(bitmap);
+    }
+
+    /**
+     * Ensures that the http connection
+     * isn't open after downloading or
+     * after an error occurs.
+     */
+    private void disconnect() {
         if (connection != null)
             connection.disconnect();
-        listener.onImageDownloaded(bitmap);
     }
 
 }
