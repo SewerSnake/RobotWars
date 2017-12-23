@@ -367,8 +367,9 @@ public class RankingActivity extends AppCompatActivity implements ImageDownloade
 
     /**
      * Starts a dialog with two options:
-     * Take a picture with the phone
-     * Upload picture from gallery
+     * "Take a picture": Take a picture with the phone, in this
+     * case the back camera. During testing the web camera is used.
+     * "No picture": Ignores taking a picture. The dialog vanishes.
      */
     public void cameraLauncher() {
         final AlertDialog.Builder builder =
