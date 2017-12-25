@@ -99,10 +99,14 @@ public class Multimedia {
                 mp.setVolume(1.0f, 1.0f);
                 mp.start();
 
-                final Animation animScale = AnimationUtils.loadAnimation(_context, R.anim.scale_up);
+                final Animation animScale =
+                        AnimationUtils.loadAnimation(_context, R.anim.scale_up);
+
                 robotSound.startAnimation(animScale);
 
-                Intent cameraIntent = new Intent(_context.getApplicationContext(), RankingActivity.class);
+                Intent cameraIntent =
+                        new Intent(_context.getApplicationContext(), FlowActivity.class);
+
                 _context.startActivity(cameraIntent);
             }
         });

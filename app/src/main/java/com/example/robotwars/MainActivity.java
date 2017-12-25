@@ -51,7 +51,7 @@ public class MainActivity extends BottomNavigationBaseActivity {
             return true;
 
         } else if(id == R.id.cameraIcon) {
-            Intent cameraIntent = new Intent(this, RankingActivity.class);
+            Intent cameraIntent = new Intent(this, FlowActivity.class);
             startActivity(cameraIntent);
             return true;
         }

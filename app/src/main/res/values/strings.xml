@@ -9,6 +9,8 @@
     <string name="ok">OK</string>
     <string name="error">Error</string>
 
+    <string name="flowChart">A flow chart for the application</string>
+
     <!-- RankingActivity Strings -->
     <string name="pricerating">Price</string>
     <string name="rank">Ranking</string>
