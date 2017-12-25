@@ -16,7 +16,7 @@ public class Robot {
     private String categoryName = null;
     private int categoryId = 0;
     private double price = 0;
-    private double taste = 0;
+    private double rank = 0;
     private double average = 0;
     private String comment = null;
     private String location = null;
@@ -34,9 +34,10 @@ public class Robot {
      */
     public Robot() {}
 
-    // Constructor for usage with GPS
+    // Constructor for full usage of all
+    // instance variables.
     public Robot(String name, int categoryId, double price,
-                 double taste, String comment, String photoPath,
+                 double rank, String comment, String photoPath,
                  String location, double latitude, double longitude,
                  String address, String tel, String web,
                  String photoPathSmall) {
@@ -44,8 +45,8 @@ public class Robot {
         this.name = name;
         this.categoryId = categoryId;
         this.price = price;
-        this.taste = taste;
-        this.average = ((price + taste) / 2);
+        this.rank = rank;
+        this.average = average();
         this.comment = comment;
         this.photoPath = photoPath;
         this.location = location;
@@ -56,6 +57,16 @@ public class Robot {
         this.tel = tel;
         this.web = web;
         this.photoPathSmall = photoPathSmall;
+    }
+
+    /**
+     * The average of the rank
+     * and the price of the
+     * robot.
+     * @return  a double value
+     */
+    private double average() {
+        return (price + rank) / 2;
     }
 
     public long getId() {
@@ -83,11 +94,11 @@ public class Robot {
     }
 
     public double getTaste() {
-        return taste;
+        return rank;
     }
 
-    public void setTaste(double taste) {
-        this.taste = taste;
+    public void setTaste(double rank) {
+        this.rank = rank;
     }
 
     public double getAverage() {
